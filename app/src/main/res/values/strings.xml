@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AgroPlus</string>
+    <string name="name">Bima Rabari</string>
+    <string name="username">bima_r</string>
+    <string name="birthdate">09/09/1998</string>
+    <string name="village">Vallabhnagar</string>
+    <string name="state">Gujarat</string>
+    <string name="state_prompt">Choose a state</string>
+    <string-array name="state_arrays">
+        <item>Gujarat</item>
+        <item>Maharashtra</item>
+        <item>Rajasthan</item>
+        <item>All</item>
+    </string-array>
+</resources>
