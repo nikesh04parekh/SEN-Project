@@ -18,7 +18,7 @@ public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerCo
     private ArrayList<disp_farmerConnect> temp = new ArrayList<>();
     public class myViewHolder extends RecyclerView.ViewHolder
     {
-        private TextView name , contact , expertise;
+        TextView name , contact , expertise;
         public myViewHolder(@NonNull View itemView)
         {
             super(itemView);
@@ -36,16 +36,24 @@ public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerCo
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i)
     {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_farmerconnect , viewGroup , false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listitem_farmerconnect , viewGroup , false);
         return new myViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder myViewHolder, int i)
     {
-        myViewHolder.name.setText(temp.get(i).getFarmername());
-        myViewHolder.contact.setText(temp.get(i).getContact());
-        myViewHolder.expertise.setText(temp.get(i).getExpertise());
+        if (i < temp.size())
+        {
+            Log.d(TAG , temp.get(i).getFarmername() + " "
+            + temp.get(i).getContact() + " " + temp.get(i).getExpertise());
+            myViewHolder.name.setText(temp.get(i).getFarmername());
+            //Log.d(TAG , "hi");
+            myViewHolder.contact.setText(temp.get(i).getContact());
+            myViewHolder.expertise.setText(temp.get(i).getExpertise());
+        }
+        else
+            return;
     }
 
     @Override
