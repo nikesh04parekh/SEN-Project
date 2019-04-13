@@ -6,6 +6,10 @@ public class disp_farmerConnect
     private String contact;
     private String expertise;
 
+    public disp_farmerConnect()
+    {
+
+    }
     public disp_farmerConnect(String farmername, String contact, String expertise) {
         this.farmername = farmername;
         this.contact = contact;

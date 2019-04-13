@@ -52,15 +52,23 @@ public class FarmerConnect extends AppCompatActivity
                         if (dataSnapshot.getValue() != null) {
                             for (DataSnapshot ds : dataSnapshot.getChildren())
                             {
-                                Log.d(TAG , ds.getValue(disp_farmerConnect.class).getFarmername());
+                                Log.d(TAG , ds.getValue(disp_farmerConnect.class).getFarmername()
+                                        + " " + ds.getValue(disp_farmerConnect.class).getContact() + " " +
+                                        ds.getValue(disp_farmerConnect.class).getExpertise());
                                 temp.add(ds.getValue(disp_farmerConnect.class));
                                 //temp.add(ds.getValue(disp_farmerConnect.class));
                                 //Log.d(TAG , foo.getContact() + " " + foo.getExpertise() + " " + foo.getFarmername());
                                 //temp.add(new disp_farmerConnect(foo.getFarmername() , foo.getContact() , foo.getExpertise()));
                             }
+                            for (int i = 0 ; i < temp.size() ; i++)
+                            {
+                                Log.d(TAG , temp.get(i).getFarmername() + " " + temp.get(i).getContact() + " " + temp.get(i).getExpertise());
+                            }
+                            Log.d(TAG , " " + temp.size());
                             RecyclerView recyclerView = findViewById(R.id.recyclerview);
                             adapter_farmerConnect bar = new adapter_farmerConnect(FarmerConnect.this, temp);
                             recyclerView.setAdapter(bar);
+                            bar.notifyDataSetChanged();
                             recyclerView.setLayoutManager(new LinearLayoutManager(FarmerConnect.this));
                         }
                     }

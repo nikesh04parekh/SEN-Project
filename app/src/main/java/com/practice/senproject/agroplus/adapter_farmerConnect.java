@@ -3,6 +3,7 @@ package com.practice.senproject.agroplus;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 
 public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerConnect.myViewHolder>
 {
+    private static final String TAG = "adapter_farmerConnect";
     private Context mContext;
     private ArrayList<disp_farmerConnect> temp = new ArrayList<>();
     public class myViewHolder extends RecyclerView.ViewHolder
@@ -28,7 +30,7 @@ public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerCo
     adapter_farmerConnect (Context context , ArrayList<disp_farmerConnect> foo)
     {
         mContext = context;
-        foo = temp;
+        temp = foo;
     }
     @NonNull
     @Override
@@ -48,6 +50,7 @@ public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerCo
 
     @Override
     public int getItemCount() {
+        //Log.d(TAG , " " + temp.size());
         return temp.size();
     }
 }

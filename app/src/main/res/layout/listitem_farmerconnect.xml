@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="abcdef"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
             android:id="@+id/name"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="20dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/contact"
-            android:layout_marginBottom="8dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/expertise"
+            android:layout_marginBottom="20dp"
+            android:text="abcde" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/expertise" />
+            android:text="abcd"
+            android:height="20dp"
+            android:id="@+id/expertise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</RelativeLayout>
+</LinearLayout>
