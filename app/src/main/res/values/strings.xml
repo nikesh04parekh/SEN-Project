@@ -11,4 +11,22 @@
         <item>Maharashtra</item>
         <item>Rajasthan</item>
     </string-array>
+    <string-array name="Gujarat_city">
+        <item>Ahmedabad</item>
+        <item>Gandhinagar</item>
+        <item>Lunavada</item>
+        <item>Junagadh</item>
+    </string-array>
+    <string-array name="Rajasthan_city">
+        <item>Jodhpur</item>
+        <item>Jaipur</item>
+        <item>Ajmer</item>
+        <item>Jaisalmer</item>
+    </string-array>
+    <string-array name="Maharashtra_city">
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Nagpur</item>
+        <item>Nashik</item>
+    </string-array>
 </resources>

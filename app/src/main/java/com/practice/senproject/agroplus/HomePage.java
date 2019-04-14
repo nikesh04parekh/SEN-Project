@@ -217,6 +217,13 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-
+        Button agroshop = findViewById(R.id.agroshops);
+        agroshop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext() , Agroshop.class);
+                startActivity(intent);
+            }
+        });
     }
 }

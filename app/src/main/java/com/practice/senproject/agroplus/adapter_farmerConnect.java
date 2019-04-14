@@ -45,8 +45,6 @@ public class adapter_farmerConnect extends RecyclerView.Adapter<adapter_farmerCo
     {
         if (i < temp.size())
         {
-            Log.d(TAG , temp.get(i).getFarmername() + " "
-            + temp.get(i).getContact() + " " + temp.get(i).getExpertise());
             myViewHolder.name.setText(temp.get(i).getFarmername());
             //Log.d(TAG , "hi");
             myViewHolder.contact.setText(temp.get(i).getContact());
