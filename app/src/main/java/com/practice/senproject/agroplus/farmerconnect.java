@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,11 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class FarmerConnect extends AppCompatActivity
+public class farmerconnect extends AppCompatActivity
 {
-    private static final String TAG = "FarmerConnect";
-    private ArrayList<disp_farmerConnect> temp = new ArrayList<>();
-
+    private static final String TAG = "farmerconnect";
     private DatabaseReference mDatabase;
     private Context mContext;
     @Override
@@ -44,19 +41,19 @@ public class FarmerConnect extends AppCompatActivity
             public void onClick(View v)
             {
                 String state = mySpinner.getSelectedItem().toString();
-                temp.clear();
                 mDatabase = FirebaseDatabase.getInstance().getReference();
-                mDatabase.child("farmerconnect").child(state).addListenerForSingleValueEvent(new ValueEventListener() {
+                mDatabase.child("farmerconnect").child(state).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                     {
+                        ArrayList<pojo_farmerconnect> temp = new ArrayList<>();
                         if (dataSnapshot.getValue() != null) {
                             for (DataSnapshot ds : dataSnapshot.getChildren())
                             {
-                                temp.add(ds.getValue(disp_farmerConnect.class));
-                                //temp.add(ds.getValue(disp_farmerConnect.class));
+                                temp.add(ds.getValue(pojo_farmerconnect.class));
+                                //temp.add(ds.getValue(pojo_farmerconnect.class));
                                 //Log.d(TAG , foo.getContact() + " " + foo.getExpertise() + " " + foo.getFarmername());
-                                //temp.add(new disp_farmerConnect(foo.getFarmername() , foo.getContact() , foo.getExpertise()));
+                                //temp.add(new pojo_farmerconnect(foo.getFarmername() , foo.getContact() , foo.getExpertise()));
                             }
 //                            for (int i = 0 ; i < temp.size() ; i++)
 //                            {
@@ -64,10 +61,10 @@ public class FarmerConnect extends AppCompatActivity
 //                            }
                             //Log.d(TAG , " " + temp.size());
                             RecyclerView recyclerView = findViewById(R.id.recyclerview);
-                            adapter_farmerConnect bar = new adapter_farmerConnect(FarmerConnect.this, temp);
+                            adapterfarmerconnect bar = new adapterfarmerconnect(farmerconnect.this, temp);
                             recyclerView.setAdapter(bar);
                             bar.notifyDataSetChanged();
-                            recyclerView.setLayoutManager(new LinearLayoutManager(FarmerConnect.this));
+                            recyclerView.setLayoutManager(new LinearLayoutManager(farmerconnect.this));
                         }
                     }
 

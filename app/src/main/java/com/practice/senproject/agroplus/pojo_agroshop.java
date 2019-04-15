@@ -1,27 +1,27 @@
 package com.practice.senproject.agroplus;
 
-public class disp_AgroShop
+public class pojo_agroshop
 {
-    private String shopName;
+    private String name;
     private Long contact;
     private String city;
 
-    disp_AgroShop()
+    pojo_agroshop()
     {
 
     }
-    public disp_AgroShop(String shopName, Long contact, String city) {
-        this.shopName = shopName;
+    public pojo_agroshop(String name, Long contact, String city) {
+        this.name = name;
         this.contact = contact;
         this.city = city;
     }
 
-    public String getShopName() {
-        return shopName;
+    public String getName() {
+        return name;
     }
 
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getContact() {

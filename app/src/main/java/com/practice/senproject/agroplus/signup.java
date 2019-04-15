@@ -88,7 +88,7 @@ public class signup extends AppCompatActivity {
                             if (!dataSnapshot.exists()) {
                                 reference.child("farmer").child(u).setValue(new pojo_farmer(n, u, p, b, c, s,-1,-1));
                                 reference.child("login").child(u).setValue(p);
-                                reference.child("farmerconnect").child(s).child(u).setValue(new disp_farmerConnect(n , con , exp));
+                                reference.child("farmerconnect").child(s).child(u).setValue(new pojo_farmerconnect(n , con , exp));
                                 Intent i = new Intent(getBaseContext(), MainActivity.class);
                                 startActivity(i);
                                 finish();

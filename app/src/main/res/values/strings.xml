@@ -29,4 +29,9 @@
         <item>Nagpur</item>
         <item>Nashik</item>
     </string-array>
+    <string-array name="crop_arrays">
+        <item>Wheat</item>
+        <item>Rice</item>
+        <item>Bajra</item>
+    </string-array>
 </resources>

@@ -113,7 +113,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -212,7 +211,7 @@ public class HomePage extends AppCompatActivity {
         farmerConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , FarmerConnect.class);
+                Intent intent = new Intent(v.getContext() , farmerconnect.class);
                 startActivity(intent);
             }
         });
@@ -221,7 +220,16 @@ public class HomePage extends AppCompatActivity {
         agroshop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , Agroshop.class);
+                Intent intent = new Intent(v.getContext() , com.practice.senproject.agroplus.agroshop.class);
+                startActivity(intent);
+            }
+        });
+
+        final Button marketyard = findViewById(R.id.marketyard);
+        marketyard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext() , marketyard.class);
                 startActivity(intent);
             }
         });

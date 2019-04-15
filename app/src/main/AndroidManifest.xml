@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.practice.senproject.agroplus">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +25,9 @@
         </activity>
         <activity android:name="com.practice.senproject.agroplus.signup"></activity>
         <activity android:name="com.practice.senproject.agroplus.profile"></activity>
-        <activity android:name="com.practice.senproject.agroplus.FarmerConnect"></activity>
-        <activity android:name="com.practice.senproject.agroplus.Agroshop"></activity>
+        <activity android:name="com.practice.senproject.agroplus.farmerconnect"></activity>
+        <activity android:name="com.practice.senproject.agroplus.agroshop"></activity>
+        <activity android:name="com.practice.senproject.agroplus.marketyard"></activity>
     </application>
 
 </manifest>

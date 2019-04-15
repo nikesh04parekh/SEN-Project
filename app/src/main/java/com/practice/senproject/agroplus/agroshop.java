@@ -1,13 +1,11 @@
 package com.practice.senproject.agroplus;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,18 +19,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Agroshop extends AppCompatActivity
+public class agroshop extends AppCompatActivity
 {
-    private static final String TAG = "Agroshop";
+    private static final String TAG = "agroshop";
     private Context mContext;
     private ArrayAdapter<String> myAdapter , myAdapter1;
     private DatabaseReference mDatabase;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agroshop);
-        mContext = Agroshop.this;
+        mContext = agroshop.this;
         final Spinner spinner1 = findViewById(R.id.spinner1);
         final Spinner spinner2 = findViewById(R.id.spinner2);
         myAdapter = new ArrayAdapter<>(this , android.R.layout.simple_list_item_1 , getResources().getStringArray(R.array.state_arrays));
@@ -92,17 +89,17 @@ public class Agroshop extends AppCompatActivity
             {
                 String sp1 = spinner1.getSelectedItem().toString();
                 final String sp2 = spinner2.getSelectedItem().toString();
-                Log.d(TAG , sp2);
-                final ArrayList<disp_AgroShop> mList = new ArrayList<>();
-                final ArrayList<disp_AgroShop> mList1 = new ArrayList<>();
+                //Log.d(TAG , sp2);
                 mDatabase = FirebaseDatabase.getInstance().getReference("agroshop").child(sp1);
-                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                mDatabase.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        ArrayList<pojo_agroshop> mList = new ArrayList<>();
+                        ArrayList<pojo_agroshop> mList1 = new ArrayList<>();
                         for (DataSnapshot ds : dataSnapshot.getChildren())
                         {
-                            Log.d(TAG , " " + ds.getValue());
-                            mList1.add(ds.getValue(disp_AgroShop.class));
+                            //Log.d(TAG , " " + ds.getValue());
+                            mList1.add(ds.getValue(pojo_agroshop.class));
                         }
                         for (int i = 0 ; i < mList1.size() ; i++)
                         {
@@ -112,7 +109,7 @@ public class Agroshop extends AppCompatActivity
                             }
                         }
                         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-                        adapter_agroshop aas = new adapter_agroshop(mContext , mList);
+                        adapteragroshop aas = new adapteragroshop(mContext , mList);
                         recyclerView.setAdapter(aas);
                         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
                     }

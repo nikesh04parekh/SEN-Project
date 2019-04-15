@@ -1,16 +1,16 @@
 package com.practice.senproject.agroplus;
 
-public class disp_farmerConnect
+public class pojo_farmerconnect
 {
     private String farmername;
     private String contact;
     private String expertise;
 
-    public disp_farmerConnect()
+    public pojo_farmerconnect()
     {
 
     }
-    public disp_farmerConnect(String farmername, String contact, String expertise) {
+    public pojo_farmerconnect(String farmername, String contact, String expertise) {
         this.farmername = farmername;
         this.contact = contact;
         this.expertise = expertise;
