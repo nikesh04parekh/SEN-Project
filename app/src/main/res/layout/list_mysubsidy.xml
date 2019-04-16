@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    >
+
+
+
+    <TextView
+        android:id="@+id/subsidyname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="abhi"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@+id/subsidyname"
+        android:text="amount: "
+        android:id="@+id/mamount"
+        android:textSize="20sp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subsidyname"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/mamount"
+        android:id="@+id/amount"
+        android:textSize="20sp"
+        android:text="abhi"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amount"
+        android:textColor="@color/white"
+        android:text="status: "
+        android:textSize="20sp"
+        android:id="@+id/mstatus"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amount"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/mstatus"
+        android:textSize="20sp"
+        android:id="@+id/status"
+        android:text="adfjdf"/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/status"
+        android:background="@color/white"/>
+
+
+
+</RelativeLayout>

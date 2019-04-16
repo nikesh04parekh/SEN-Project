@@ -50,15 +50,15 @@ public class adaptermarketyard extends RecyclerView.Adapter<adaptermarketyard.my
         myViewHolder.city.setText(foo.get(i).getCity());
         if (crop_name.equals("Wheat"))
         {
-            myViewHolder.imageView.setImageResource(R.drawable.wheat);
+            myViewHolder.imageView.setImageResource(R.drawable.wheat1);
         }
         else if (crop_name.equals("Rice"))
         {
-            myViewHolder.imageView.setImageResource(R.drawable.rice);
+            myViewHolder.imageView.setImageResource(R.drawable.rice1);
         }
         else
         {
-            myViewHolder.imageView.setImageResource(R.drawable.bajra);
+            myViewHolder.imageView.setImageResource(R.drawable.bajra1);
         }
     }
 

@@ -28,6 +28,10 @@
         <activity android:name="com.practice.senproject.agroplus.farmerconnect"></activity>
         <activity android:name="com.practice.senproject.agroplus.agroshop"></activity>
         <activity android:name="com.practice.senproject.agroplus.marketyard"></activity>
+        <activity android:name="com.practice.senproject.agroplus.allsubsidy"/>
+        <activity android:name="com.practice.senproject.agroplus.subsidydetails" />
+        <activity android:name="com.practice.senproject.agroplus.mysubsidy"/>
+        <activity android:name="com.practice.senproject.agroplus.notifysubsidy"/>
     </application>
 
 </manifest>

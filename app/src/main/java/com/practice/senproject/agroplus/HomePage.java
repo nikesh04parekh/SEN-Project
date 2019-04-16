@@ -206,8 +206,36 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        Button notifysubsidy = findViewById(R.id.notifysubsidy);
+        notifysubsidy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getBaseContext(),notifysubsidy.class);
+                startActivity(i);
 
-        Button farmerConnect = findViewById(R.id.farmerConnect);
+            }
+        });
+        Button allsubsidy = findViewById(R.id.allsubsidy);
+        allsubsidy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getBaseContext(),allsubsidy.class);
+                startActivity(i);
+
+            }
+        });
+
+        mysubsidy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(getBaseContext(),mysubsidy.class);
+                startActivity(i);
+
+            }
+        });
+
+        Button farmerConnect = findViewById(R.id.farmerconnect);
         farmerConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -225,7 +253,7 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        final Button marketyard = findViewById(R.id.marketyard);
+        Button marketyard = findViewById(R.id.marketyard);
         marketyard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

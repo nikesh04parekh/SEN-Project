@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    >
+
+
+
+    <TextView
+        android:id="@+id/nsubsidyname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="abhi"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@+id/nsubsidyname"
+        android:text="amount: "
+        android:id="@+id/nmamount"
+        android:textSize="20sp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nsubsidyname"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/nmamount"
+        android:id="@+id/namount"
+        android:textSize="20sp"
+        android:text="abhi"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namount"
+        android:textColor="@color/white"
+        android:text="status: "
+        android:textSize="20sp"
+        android:id="@+id/nmstatus"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namount"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/nmstatus"
+        android:textSize="20sp"
+        android:id="@+id/nstatus"
+        android:text="adfjdf"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nstatus"
+        android:id="@+id/verify"
+        android:textColor="@color/white"
+        android:text="Verify"
+        />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/verify"
+        android:background="@color/white"/>
+
+
+
+</RelativeLayout>
