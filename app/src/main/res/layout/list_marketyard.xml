@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="wrap_content"
         android:id="@+id/crop_image"
-        android:layout_height="wrap_content"
+        android:layout_width = "80dp"
+        android:layout_height="60dp"
         android:src="@mipmap/ic_launcher"
-        android:layout_marginEnd="30dp"/>
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,10 +38,10 @@
             android:id="@+id/range"
             android:text="100-300"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"/>
-
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
 
 </LinearLayout>
